@@ -27,7 +27,7 @@ const GalaxyBackground = () => {
         canvas.width = window.innerWidth;
         canvas.height = window.innerHeight;
 
-        const numStars = 40;
+        const numStars = 50;
 
         const createStars = () => {
             stars.current = Array.from({ length: numStars }).map(() => ({

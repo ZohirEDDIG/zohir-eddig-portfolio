@@ -43,14 +43,13 @@ const Header = () => {
 
                 </nav>
 
-                {/* Socials */}
                 <div>
 
                     <ul className='flex items-center gap-x-4 xl:gap-x-8'>
 
                         <li>
                             
-                            <a className='text-secondary text-lg drop-shadow-secondary ' href='https://github.com/ZohirEDDIG'>
+                            <a className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' href='https://github.com/ZohirEDDIG'>
 
                                 <Github />
                         
@@ -60,7 +59,7 @@ const Header = () => {
 
                         <li>
                             
-                            <a className='text-secondary text-lg drop-shadow-secondary ' href='https://www.linkedin.com/in/zohir-eddig-628669317'>
+                            <a className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' href='https://www.linkedin.com/in/zohir-eddig-628669317'>
 
                                 <Linkedin />
                         
@@ -70,7 +69,7 @@ const Header = () => {
 
                         <li>
                             
-                            <a className='text-secondary text-lg drop-shadow-secondary ' href='https://x.com/zohireddig'>
+                            <a className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' href='https://x.com/zohireddig'>
 
                                 <Twitter />
                         
@@ -80,7 +79,7 @@ const Header = () => {
 
                         <li>
                             
-                            <a className='text-secondary text-lg drop-shadow-secondary ' href='mailto:zohireddig.dev@gmail.com'>
+                            <a className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' href='mailto:zohireddig.dev@gmail.com'>
 
                                 <Mail />
                         

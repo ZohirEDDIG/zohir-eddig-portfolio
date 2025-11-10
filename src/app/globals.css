@@ -3,7 +3,7 @@
 @import 'tailwindcss';
 
 @theme {
-    --color-primary: #1b1b1b;
+    --color-primary: #000;
     --color-secondary: #80e0d5;
     --color-tertiary: #333;
 }
@@ -14,8 +14,17 @@
                 after:transition-[width] after:duration-300 after:ease-in-out;
     }
 
-    .drop-shadow-secondary {
-        @apply  transition-shadow duration-300 ease-in-out hover:drop-shadow-[0_0_0.75rem_var(--color-secondary)];
+    .h-screen-minus-header {
+        @apply h-[calc(100vh-144px)] md:h-[calc(100vh-60px)];
+    }
+
+    .horizontal-line {
+        @apply relative before:content-[""]  before:bg-gray-300 before:w-0.5 before:h-28
+            before:absolute before:right-1/2 before:-bottom-20 before:-translate-x-1/2;
+    }
+
+    .writing-mode-vertical {
+        writing-mode: vertical-rl;
     }
 }
 
