@@ -1,7 +1,7 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
@@ -13,7 +13,6 @@ const Header = () => {
 
             <div className='container p-4 mx-auto border-gray-300 flex flex-col md:flex-row items-center justify-between gap-y-4'>
 
-                {/* Logo */}
                 <Link className='text-xl font-bold flex items-center gap-x-3' href='/'>
 
                     <span className='text-secondary'>{'<'}</span>
@@ -24,20 +23,79 @@ const Header = () => {
 
                 </Link>
 
-                {/* Navigation */}
                 <nav>
 
                     <ul className='flex items-center gap-x-5 xl:gap-x-10'>
 
-                        <li><Link className={`text-gray-300 text-lg underline-secondary ${pathname === '/' ? 'after:w-6' : 'hover:after:w-6'}`} href='/'>Home.</Link></li>
+                        <li>
+                            
+                            <Link 
+                                className={`text-gray-300 sm:text-lg underline-secondary 
+                                ${pathname === '/' ? 'after:w-6' : 'hover:after:w-6'}`}
+                                href='/'
+                            >
+                                
+                                Home.
+                            
+                            </Link>
+                        
+                        </li>
 
-                        <li><Link className={`text-gray-300 text-lg underline-secondary ${pathname === '/skills' ? 'after:w-6' : 'hover:after:w-6'}`} href='/skills'>Skills.</Link></li>
+                        <li>
+                            
+                            <Link 
+                                className={`text-gray-300 sm:text-lg underline-secondary 
+                                ${pathname === '/skills' ? 'after:w-6' : 'hover:after:w-6'}`} 
+                                href='/skills'
+                            >
+                            
+                                Skills.
+                            
+                            </Link>
+                        
+                        </li>
 
-                        <li><Link className={`text-gray-300 text-lg underline-secondary ${pathname === '/projects' ? 'after:w-6' : 'hover:after:w-6'}`} href='/projects'>Projects.</Link></li>
+                        <li>
+                            
+                            <Link 
+                                className={`text-gray-300 sm:text-lg underline-secondary 
+                                ${pathname === '/projects' ? 'after:w-6' : 'hover:after:w-6'}`} 
+                                href='/projects'
+                            >
+                                
+                                Projects.
+                            
+                            </Link>
+                            
+                        </li>
 
-                        <li><Link className={`text-gray-300 text-lg underline-secondary ${pathname === '/about' ? 'after:w-6' : 'hover:after:w-6'}`} href='/about'>About.</Link></li>
+                        <li>
+                            
+                            <Link 
+                                className={`text-gray-300 sm:text-lg underline-secondary 
+                                ${pathname === '/about' ? 'after:w-6' : 'hover:after:w-6'}`} 
+                                href='/about'
+                            >
+                                
+                                About.
+                            
+                            </Link>
+                        
+                        </li>
 
-                        <li><Link className={`text-gray-300 text-lg underline-secondary ${pathname === '/contact' ? 'after:w-6' : 'hover:after:w-6'}`} href='/contact'>Contact.</Link></li>
+                        <li>
+                            
+                            <Link 
+                                className={`text-gray-300 sm:text-lg underline-secondary 
+                                ${pathname === '/contact' ? 'after:w-6' : 'hover:after:w-6'}`} 
+                                href='/contact'
+                            >
+                                
+                                Contact.
+                            
+                            </Link>
+                        
+                        </li>
 
                     </ul>
 
@@ -49,7 +107,10 @@ const Header = () => {
 
                         <li>
                             
-                            <a className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' href='https://github.com/ZohirEDDIG'>
+                            <a 
+                                className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' 
+                                href='https://github.com/ZohirEDDIG'
+                            >
 
                                 <Github />
                         
@@ -59,7 +120,10 @@ const Header = () => {
 
                         <li>
                             
-                            <a className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' href='https://www.linkedin.com/in/zohir-eddig-628669317'>
+                            <a 
+                                className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' 
+                                href='https://www.linkedin.com/in/zohir-eddig-628669317'
+                            >
 
                                 <Linkedin />
                         
@@ -69,7 +133,10 @@ const Header = () => {
 
                         <li>
                             
-                            <a className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' href='https://x.com/zohireddig'>
+                            <a 
+                                className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' 
+                                href='https://x.com/zohireddig'
+                            >
 
                                 <Twitter />
                         
@@ -79,14 +146,16 @@ const Header = () => {
 
                         <li>
                             
-                            <a className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' href='mailto:zohireddig.dev@gmail.com'>
+                            <a 
+                                className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' 
+                                href='mailto:zohireddig.dev@gmail.com'
+                            >
 
                                 <Mail />
                         
                             </a>
                             
                         </li>
-
 
                     </ul>
 

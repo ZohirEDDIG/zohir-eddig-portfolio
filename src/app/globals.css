@@ -5,17 +5,12 @@
 @theme {
     --color-primary: #000;
     --color-secondary: #80e0d5;
-    --color-tertiary: #333;
 }
 
 @layer components {
     .underline-secondary {
         @apply relative after:content-[''] after:bg-secondary after:w-0 after:h-px after:absolute after:bottom-0 after:left-0 
                 after:transition-[width] after:duration-300 after:ease-in-out;
-    }
-
-    .h-screen-minus-header {
-        @apply h-[calc(100vh-144px)] md:h-[calc(100vh-60px)];
     }
 
     .horizontal-line {
@@ -31,4 +26,17 @@
 body {
     background-color: var(--color-primary);
     font-family: 'Share Tech';
+}
+
+a {
+    user-select: none;
+}
+
+button {
+    cursor: pointer;
+    user-select: none;
+}
+
+img {
+    user-select: none;
 }
