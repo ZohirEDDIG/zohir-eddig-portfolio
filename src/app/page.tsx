@@ -1,4 +1,4 @@
-import { Hero, Skills } from '@/components/home';
+import { Hero, Skills, Projects } from '@/components/home';
 
 export default function Home() {
     return (
@@ -7,6 +7,8 @@ export default function Home() {
             <Hero />
 
             <Skills />
+
+            <Projects />
             
         </>
     );

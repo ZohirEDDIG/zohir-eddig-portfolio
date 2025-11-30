@@ -16,6 +16,11 @@ type Skill = {
 
 const techs: Skill[] = [
     {
+        src: '/skills/TailwindCSS.svg',
+        name: 'TailwindCSS',
+        tagline: 'A utility-first CSS framework',
+    },
+    {
         src: '/skills/JavaScript.svg',
         name: 'JavaScript',
         tagline: 'Core web programming',
@@ -144,8 +149,6 @@ const Skills = () => {
 
 export default Skills;
 
-
-
 const SkillCard = ({ src, name, tagline }: Skill) => {
     return (
         <div 
@@ -156,7 +159,7 @@ const SkillCard = ({ src, name, tagline }: Skill) => {
             <Image
                 className='transition-transform duration-300 ease-in-out group-hover:scale-110'
                 src={src}
-                alt={name}
+                alt={`${name} icon`}
                 width={60}
                 height={60}
             />
