@@ -40,3 +40,15 @@ button {
 img {
     user-select: none;
 }
+
+.bounce-slowly {
+    animation: bounce-slowly 5s linear infinite;
+}
+
+@keyframes bounce-slowly {
+    0%, 100% {
+        transform: translateY(0);
+    } 50% {
+        transform: translateY(10px);
+    }
+}
