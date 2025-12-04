@@ -35,7 +35,7 @@ const Nav = ({ category, setCategory }: Props) => {
 
                 Experience
 
-            </button>
+            </button> 
 
             <button  
                 className={`text-xs sm:text-sm  ${category === 'certifications' ? 'text-secondary underline' : 'text-gray-300 hover:text-secondary hover:underline'}
