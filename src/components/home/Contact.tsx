@@ -1,6 +1,8 @@
-import SectionIntro from '../SectionIntro';
 import { JSX } from 'react';
+
 import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+
+import SectionIntro from './SectionIntro';
 
 type Contact = {
   icon: JSX.Element;
@@ -31,14 +33,13 @@ const contact: Contact[] = [
     },
 ];
 
-
 const Contact = () => {
     return (
         <section className='mt-20'>
 
             <div className='container mx-auto p-4'>
 
-                <SectionIntro title='Contact' description="Let's get in touch" />
+                <SectionIntro title='Contact' description="Let's get in touch — I'm always open to new opportunities and collaborations." />
 
                 <div className='flex flex-col gap-y-10 mt-10'>
 

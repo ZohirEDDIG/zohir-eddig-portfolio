@@ -1,8 +1,9 @@
-import { ArrowUpRight, MoveRight,  } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+
+import { ArrowUpRight, MoveRight,  } from 'lucide-react';
 
 import SectionIntro from './SectionIntro';
-import Image from 'next/image';
 
 type Project = {
     preview: string;
