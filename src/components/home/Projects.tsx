@@ -6,7 +6,8 @@ import { ArrowUpRight, MoveRight,  } from 'lucide-react';
 import SectionIntro from './SectionIntro';
 
 type Project = {
-    preview: string;
+    previewInPC: string;
+    previewInMobile: string;
     name: string;
     description: string;
     techs: string[];
@@ -15,21 +16,24 @@ type Project = {
 
 const projects: Project[] = [
     {
-        preview: '/projects/Netlify.jpeg',
+        previewInMobile: '/projects/ZAI-in-mobile.svg',
+        previewInPC:'/projects/ZAI-in-pc.svg',
         name: 'ZAI',
         description: 'ZAI is a lightweight full-stack clone of Google’s Gemini, built to replicate the experience of interacting with an AI assistant.',
         techs: ['React', 'TailwindCSS', 'Express', 'Node', 'MongoDB'],
         url: '/'
     },
     {
-        preview: '/projects/Netlify.jpeg',
+        previewInMobile: '/projects/ZBlogs-in-mobile.svg',
+        previewInPC:'/projects/ZBlogs-in-pc.svg',
         name: 'ZBlogs',
         description: 'ZBlogs is a clean, modern blogging platform inspired by Medium, designed for writers who want a simple yet powerful space to share their ideas.',
         techs: ['React', 'TailwindCSS', 'Express', 'Node', 'MongoDB'],
         url: '/',
     },
     {
-        preview: '/projects/Netlify.jpeg',
+        previewInMobile: '/projects/ZPic-in-mobile.svg',
+        previewInPC:'/projects/ZPic-in-pc.svg',
         name: 'ZPic',
         description: 'ZPic is a visually driven wallpaper-sharing platform inspired by Wallspic, built for users who love discovering and sharing high-quality images.',
         techs: ['React', 'TailwindCSS', 'Express', 'Node', 'MongoDB'],
@@ -91,15 +95,17 @@ const ProjectCard = ({ project }: { project: Project }) => {
             <div className='hidden md:flex'>
 
                 <Image 
-                    src='/projects/Netlify-in-pc.svg' 
-                    alt={`${project.name} preview in a laptop`} 
+                    src={project.previewInPC}
+                    alt={`${project.name} preview in a pc`} 
                     width='200' 
                     height='200' 
                 />
 
                 <Image 
-                    src='/projects/Netlify-in-mobile.svg' 
-                    alt={`${project.name} preview in a mobile device`}
+                    src={project.previewInMobile
+
+                    }
+                    alt={`${project.name} preview in a mobile`}
                     width='150' 
                     height='150' 
                 />
