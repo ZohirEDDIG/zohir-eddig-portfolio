@@ -6,6 +6,8 @@ import { useState } from 'react';
 
 import { CodeXml, Wrench } from 'lucide-react';
 
+import { motion, AnimatePresence, MotionValue } from 'framer-motion';
+
 import { techs, tools, type Skill } from '../data/skills';
 
 import SectionIntro from './SectionIntro';
@@ -40,8 +42,9 @@ const Skills = () => {
                     </button>
 
                     <button  
-                        className={`${category === 'tools' ? 'text-secondary underline' : 'text-gray-300 hover:text-secondary hover:underline'}
-                        py-1 flex justify-center items-center gap-x-2`}
+                        className={`${category === 'tools' ? 'text-secondary underline' : 
+                            'text-gray-300 underline decoration-transparent hover:text-secondary hover:decoration-secondary'}
+                            py-1 flex justify-center items-center gap-x-2 transition-all duration-300 ease-in-out`}
                         onClick={() => setCategory('tools')}
                     >
 
@@ -53,20 +56,37 @@ const Skills = () => {
 
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+                <AnimatePresence mode='wait'>
 
-                    {
-                        skills.map((skill, index) => (
-                                
-                            <SkillCard key={index} {...skill} />
+                    <motion.div
+                        key={category}
+                        className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'
+                        initial='hidden'
+                        animate='visible'
+                        exit='hidden'
+                        variants={{
+                            hidden: { opacity: 0 },
+                            visible: {
+                                opacity: 1,
+                                transition: { staggerChildren: 0.08 }
+                            }
+                        }}
+                    >
 
-                        ))
-                    }
+                        {
+                            skills.map((skill, index) => (
+                                    
+                                <SkillCard key={index} {...skill} />
 
-                </div>
+                            ))
+                        }
+
+                    </motion.div>
+                    
+                </AnimatePresence>
 
             </div>
-
+        
         </section>
     );
 };
@@ -75,7 +95,14 @@ export default Skills;
 
 const SkillCard = ({ src, name, tagline }: Skill) => {
     return (
-        <div 
+        <motion.div 
+            variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 }
+            }}
+            whileHover={{ y: -8 }}
+            whileTap={{ scale: 0.97 }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             className='text-center p-4 group relative  border-[1.5px] border-secondary/20 rounded-md shadow-md 
             flex flex-col items-center gap-y-3 transition-all duration-300 ease-in-out hover:-translate-y-2 hover:border-secondary/40'
         >   
@@ -92,6 +119,6 @@ const SkillCard = ({ src, name, tagline }: Skill) => {
 
             <p className='text-gray-300 text-sm'>{tagline}</p>
 
-        </div>
+        </motion.div>
     );
 };

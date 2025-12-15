@@ -37,7 +37,8 @@ const Contact = () => {
                                         {social.icon}
 
                                         <h2 
-                                            className='text-gray-400 cursor-pointer duration-300 transition-all ease-in-out hover:text-white hover:underline'
+                                            className='text-gray-400 underline decoration-transparent cursor-pointer
+                                            duration-300 transition-all  ease-in-out hover:text-white hover:decoration-white'
                                         >
                                             
                                             {social.label}
