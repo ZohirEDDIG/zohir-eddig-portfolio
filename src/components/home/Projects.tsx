@@ -31,10 +31,10 @@ const Projects = () => {
                 </div>
 
                 <Link 
-                
                     href='/projects' 
                     className='text-secondary w-fit px-4 py-2 mx-auto border border-secondary flex items-center gap-x-2 
-                    hover:opacity-80 transition duration-300 ease-in-out' type='button'>
+                    hover:opacity-80 transition duration-300 ease-in-out' type='button'
+                >
                     
                     View Full Project Archive
 
