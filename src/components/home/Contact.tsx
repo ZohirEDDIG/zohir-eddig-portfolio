@@ -1,37 +1,6 @@
-import { JSX } from 'react';
-
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { socials } from '../data/socials';
 
 import SectionIntro from './SectionIntro';
-
-type Contact = {
-  icon: JSX.Element;
-  href: string;
-  label: string;
-};
-
-const contact: Contact[] = [
-    {
-        icon: <Github className='text-secondary cursor-pointer select-none duration-300 transition-all ease-in-out hover:drop-shadow-[0_0_0.75rem_var(--color-secondary)]' />,
-        href: 'https://github.com/ZohirEDDIG',
-        label: '@ZohirEDDIG',
-    },
-    {
-        icon:  <Linkedin className='text-secondary cursor-pointer select-none duration-300 transition-all ease-in-out hover:drop-shadow-[0_0_0.75rem_var(--color-secondary)]'/>,
-        href: 'https://www.linkedin.com/in/zohir-eddig-628669317',
-        label: '@ZohirEDDIG',
-    },
-    {
-        icon: <Twitter className='text-secondary cursor-pointer select-none duration-300 transition-all ease-in-out hover:drop-shadow-[0_0_0.75rem_var(--color-secondary)]' />,
-        href: 'https://x.com/zohireddig',
-        label: '@ZohirEDDIG',
-    },
-    {
-        icon: <Mail className='text-secondary cursor-pointer select-none duration-300 transition-all ease-in-out hover:drop-shadow-[0_0_0.75rem_var(--color-secondary)]'/>,
-        href: 'mailto:zohireddig.dev@gmail.com',
-        label: 'zohireddig.dev@gmail.com',
-    },
-];
 
 const Contact = () => {
     return (
@@ -51,12 +20,12 @@ const Contact = () => {
                     <div className='grid max-[500px]:grid-cols-1 grid-cols-2 gap-10'>
 
                         {
-                            contact.map((contact, index) => (
+                            socials.map((social, index) => (
                             
                                 <a 
                                     className={`flex items-center  ${index % 2 !== 0 && 'justify-end'}   gap-x-4 cursor-auto`}
                                     key={index} 
-                                    href={contact.href} 
+                                    href={social.href} 
                                     target='_blank'
                                 >
                                     {index % 2 === 0  
@@ -65,13 +34,13 @@ const Contact = () => {
 
                                     <>
 
-                                        {contact.icon}
+                                        {social.icon}
 
                                         <h2 
                                             className='text-gray-400 cursor-pointer duration-300 transition-all ease-in-out hover:text-white hover:underline'
                                         >
                                             
-                                            {contact.label}
+                                            {social.label}
                                         
                                         </h2>
 
@@ -81,20 +50,18 @@ const Contact = () => {
 
                                     <>
 
-
                                         <h2 
                                             className='text-gray-400 cursor-pointer duration-300 transition-all ease-in-out hover:text-white hover:underline'
                                         >
                                             
-                                            {contact.label}
+                                            {social.label}
                                         
                                         </h2>
 
-                                        {contact.icon}
+                                        {social.icon}
 
                                     </>
                                 }
-
 
                                 </a>
 

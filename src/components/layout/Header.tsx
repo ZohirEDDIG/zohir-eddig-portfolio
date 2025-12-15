@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import { socials } from '../data/socials';
 
 const Header = () => {
     const pathname = usePathname();
@@ -105,57 +105,23 @@ const Header = () => {
 
                     <ul className='flex items-center gap-x-4 xl:gap-x-8'>
 
-                        <li>
+                        {
+                            socials.map((social, index) => (
+
+                                <li key={index}>
+                                        
+                                    <a 
+                                        className='text-gray-300 text-lg transition duration-300 ease-in-out hover:drop-shadow-[0_0_0.75rem_var(--color-secondary)]' 
+                                        href='https://github.com/ZohirEDDIG'
+                                    >
+
+                                        {social.icon}
                             
-                            <a 
-                                className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' 
-                                href='https://github.com/ZohirEDDIG'
-                            >
+                                    </a>
 
-                                <Github />
-                        
-                            </a>
+                                </li>
 
-                        </li>
-
-                        <li>
-                            
-                            <a 
-                                className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' 
-                                href='https://www.linkedin.com/in/zohir-eddig-628669317'
-                            >
-
-                                <Linkedin />
-                        
-                            </a>
-                            
-                        </li>
-
-                        <li>
-                            
-                            <a 
-                                className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' 
-                                href='https://x.com/zohireddig'
-                            >
-
-                                <Twitter />
-                        
-                            </a>
-                            
-                        </li>
-
-                        <li>
-                            
-                            <a 
-                                className='text-secondary text-lg hover:opacity-80 transition duration-300 ease-in-out' 
-                                href='mailto:zohireddig.dev@gmail.com'
-                            >
-
-                                <Mail />
-                        
-                            </a>
-                            
-                        </li>
+                            ))}
 
                     </ul>
 
