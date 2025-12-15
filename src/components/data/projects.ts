@@ -32,4 +32,12 @@ export const projects: Project[] = [
         techs: ['React', 'TailwindCSS', 'Express', 'Node', 'MongoDB'],
         url: '/'
     },
+    {
+        previewInMobile: '/projects/Netlify-in-mobile.svg',
+        previewInPC:'/projects/Netlify-in-pc.svg',
+        name: 'Netlify',
+        description: 'A pixel-perfect clone of the Netlify landing page, built to replicate its modern UI, responsive layout, and smooth user experience using Next.js and Tailwind CSS.',
+        techs: ['Next', 'TailwindCSS'],
+        url: '/'
+    },
 ];
