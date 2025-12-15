@@ -8,7 +8,7 @@ const Footer = () => {
 
                 <p className='text-gray-400 text-sm'>
 
-                    © {year} • Designed & Built by <span className='font-semibold'>Zohir EDDIG</span>
+                    © {year} • Zohir EDDIG — Designed & Built with Next.js
 
                 </p>
 
