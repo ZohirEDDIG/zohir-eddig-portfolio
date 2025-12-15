@@ -9,7 +9,7 @@ import SectionIntro from './SectionIntro';
 const About = () => {
 
     return (
-        <section className='mt-20'>
+        <section className='mt-20' id='about'>
 
             <div className='container mx-auto p-4 flex flex-col gap-y-10'>
 

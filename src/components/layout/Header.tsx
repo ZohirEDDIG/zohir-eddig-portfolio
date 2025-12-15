@@ -1,12 +1,14 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
+import { useState } from 'react';
+
+import { links } from '../data/links';
 import { socials } from '../data/socials';
 
 const Header = () => {
-    const pathname = usePathname();
+    const [activeLinkHref, setActiveLinkHref] = useState('/');
 
     return (
         <header>
@@ -27,75 +29,28 @@ const Header = () => {
 
                     <ul className='flex items-center gap-x-5 xl:gap-x-10'>
 
-                        <li>
+                        {
                             
-                            <Link 
-                                className={`text-gray-300 sm:text-lg underline-secondary 
-                                ${pathname === '/' ? 'after:w-6' : 'hover:after:w-6'}`}
-                                href='/'
-                            >
-                                
-                                Home.
-                            
-                            </Link>
-                        
-                        </li>
+                            links.map((link, index) => (
 
-                        <li>
-                            
-                            <Link 
-                                className={`text-gray-300 sm:text-lg underline-secondary 
-                                ${pathname === '/skills' ? 'after:w-6' : 'hover:after:w-6'}`} 
-                                href='/skills'
-                            >
-                            
-                                Skills.
-                            
-                            </Link>
-                        
-                        </li>
-
-                        <li>
-                            
-                            <Link 
-                                className={`text-gray-300 sm:text-lg underline-secondary 
-                                ${pathname === '/projects' ? 'after:w-6' : 'hover:after:w-6'}`} 
-                                href='/projects'
-                            >
+                                <li key={index}>
+                                    
+                                    <Link 
+                                        className={`text-gray-300 sm:text-lg underline-secondary 
+                                        ${(activeLinkHref === link.href) ? 'after:w-6' : 'hover:after:w-6'}`}
+                                        href={link.href}
+                                        onClick={() => setActiveLinkHref(link.href)}
+                                    >
+                                        
+                                        {link.label}
+                                    
+                                    </Link>
                                 
-                                Projects.
-                            
-                            </Link>
-                            
-                        </li>
+                                </li>
 
-                        <li>
-                            
-                            <Link 
-                                className={`text-gray-300 sm:text-lg underline-secondary 
-                                ${pathname === '/about' ? 'after:w-6' : 'hover:after:w-6'}`} 
-                                href='/about'
-                            >
-                                
-                                About.
-                            
-                            </Link>
-                        
-                        </li>
+                            ))
 
-                        <li>
-                            
-                            <Link 
-                                className={`text-gray-300 sm:text-lg underline-secondary 
-                                ${pathname === '/contact' ? 'after:w-6' : 'hover:after:w-6'}`} 
-                                href='/contact'
-                            >
-                                
-                                Contact.
-                            
-                            </Link>
-                        
-                        </li>
+                        }
 
                     </ul>
 

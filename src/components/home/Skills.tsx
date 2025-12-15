@@ -16,7 +16,7 @@ const Skills = () => {
     let skills = category === 'techs' ? techs : tools;
 
     return (
-        <section>
+        <section id='skills'>
 
             <div className='container mx-auto p-4 flex flex-col gap-y-10'>
 

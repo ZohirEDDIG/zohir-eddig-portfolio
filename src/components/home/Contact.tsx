@@ -4,7 +4,7 @@ import SectionIntro from './SectionIntro';
 
 const Contact = () => {
     return (
-        <section className='mt-20'>
+        <section className='mt-20' id='contact'>
 
             <div className='container mx-auto p-4'>
 
