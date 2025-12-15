@@ -3,43 +3,9 @@ import Image from 'next/image';
 
 import { ArrowUpRight, MoveRight,  } from 'lucide-react';
 
+import { projects, type Project } from '../data/projects';
+
 import SectionIntro from './SectionIntro';
-
-type Project = {
-    previewInPC: string;
-    previewInMobile: string;
-    name: string;
-    description: string;
-    techs: string[];
-    url: string;
-};
-
-const projects: Project[] = [
-    {
-        previewInMobile: '/projects/ZAI-in-mobile.svg',
-        previewInPC:'/projects/ZAI-in-pc.svg',
-        name: 'ZAI',
-        description: 'ZAI is a lightweight full-stack clone of Google’s Gemini, built to replicate the experience of interacting with an AI assistant.',
-        techs: ['React', 'TailwindCSS', 'Express', 'Node', 'MongoDB'],
-        url: '/'
-    },
-    {
-        previewInMobile: '/projects/ZBlogs-in-mobile.svg',
-        previewInPC:'/projects/ZBlogs-in-pc.svg',
-        name: 'ZBlogs',
-        description: 'ZBlogs is a clean, modern blogging platform inspired by Medium, designed for writers who want a simple yet powerful space to share their ideas.',
-        techs: ['React', 'TailwindCSS', 'Express', 'Node', 'MongoDB'],
-        url: '/',
-    },
-    {
-        previewInMobile: '/projects/ZPic-in-mobile.svg',
-        previewInPC:'/projects/ZPic-in-pc.svg',
-        name: 'ZPic',
-        description: 'ZPic is a visually driven wallpaper-sharing platform inspired by Wallspic, built for users who love discovering and sharing high-quality images.',
-        techs: ['React', 'TailwindCSS', 'Express', 'Node', 'MongoDB'],
-        url: '/'
-    },
-];
 
 const Projects = () => {
     return (
