@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { MoveRight, Github, Linkedin, Twitter, Mail } from 'lucide-react';
 
 const Hero = () => {
@@ -81,13 +83,16 @@ const Hero = () => {
                             With a strong focus on <span className='text-secondary'>performance</span> and <span className='text-secondary'>user experience</span>, I create clean interfaces and <span className='text-secondary'>efficient</span> backend systems using the latest technologies.
                         </p>
 
-                        <button className='text-secondary w-fit px-4 py-2 mt-2.5 border border-secondary flex items-center gap-x-2 hover:opacity-80 transition duration-300 ease-in-out' type='button'>
+                        <Link 
+                            className='text-secondary w-fit px-4 py-2 mt-2.5 border border-secondary flex items-center gap-x-2 hover:opacity-80 transition duration-300 ease-in-out' 
+                            href='/projects'
+                        >
                             
                             Explore my Work
 
                             <MoveRight className='animate-pulse'/>
                         
-                        </button>
+                        </Link>
 
                     </div>
 
