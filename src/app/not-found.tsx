@@ -8,7 +8,7 @@ export default function NotFound() {
 
             <div className='container h-full p-4 mx-auto flex flex-col justify-center items-center gap-y-4'>
 
-                <h1 className='text-gray-200 text-2xl'>
+                <h1 className='text-gray-200 text-xl'>
 
                     404 | This page could not be found
                 

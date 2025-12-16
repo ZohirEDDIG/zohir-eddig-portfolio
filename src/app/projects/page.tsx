@@ -7,7 +7,7 @@ export default function Projects() {
 
             <div className='container h-full p-4 mx-auto flex flex-col justify-center items-center gap-y-4'>
 
-                <h1 className='text-gray-400 text-2xl animate-pulse'>
+                <h1 className='text-gray-400 text-xl animate-pulse'>
                     
                     We’re working on this page. Coming soon.
                     
